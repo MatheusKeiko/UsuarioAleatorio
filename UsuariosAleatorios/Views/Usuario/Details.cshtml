@@ -1,0 +1,132 @@
+﻿@model UsuariosAleatorios.Models.usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Informações</h2>
+
+<div>
+    <h4>Usuário</h4>
+
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NomeCompleto)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.NomeCompleto)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.gender)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.gender)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.email)
+                    </dd>
+
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.phone)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.phone)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.cell)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.cell)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.country)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.country)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.nat)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.nat)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.city)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.city)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.state)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.state)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.postcode)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.postcode)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.EndereçoCompleto)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.EndereçoCompleto)
+                    </dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </dl>
+            </div>
+            <div class="col-sm-6">
+                <img src="@Model.picture.large" alt="Foto do usuário" class="img-circle " />
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<p>
+    @Html.ActionLink("Voltar para a lista", "Index")
+</p>
