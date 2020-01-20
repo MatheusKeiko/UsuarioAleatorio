@@ -20,17 +20,17 @@ namespace UsuariosAleatorios.Controllers
             string urlApi = "https://randomuser.me/api?results=10&seed=matheus";
 
             HttpClient client = new HttpClient();
-            //client.BaseAddress = new Uri(urlApi);
 
-            // Add an Accept header for JSON format.
+
+            // adiciona e aceita formato json
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            // List data response.
-            HttpResponseMessage response = client.GetAsync(urlApi).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+
+            HttpResponseMessage response = client.GetAsync(urlApi).Result;
             if (response.IsSuccessStatusCode)
             {
-                // Parse the response body.
-                string jsonResposta = response.Content.ReadAsStringAsync().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
+
+                string jsonResposta = response.Content.ReadAsStringAsync().Result;
 
                 var lstUsuarios2 = JsonConvert.DeserializeObject<listausuarios>(jsonResposta);
                 lstUsuarios = lstUsuarios2.results;
@@ -40,9 +40,9 @@ namespace UsuariosAleatorios.Controllers
                 Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
             }
 
-            //Make any other calls using HttpClient here.
 
-            //Dispose once all HttpClient calls are complete. This is not necessary if the containing object will be disposed of; for example in this case the HttpClient instance will be disposed automatically when the application terminates so the following call is superfluous.
+
+
             client.Dispose();
 
             return lstUsuarios;

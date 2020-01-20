@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Informações</h2>
 
 <div>
-    <h4>usuario</h4>
+    <h4>Usuário</h4>
 
     <hr />
     <div class="container">
@@ -38,6 +38,7 @@
                         @Html.DisplayFor(model => model.email)
                     </dd>
 
+
                     <dt>
                         @Html.DisplayNameFor(model => model.phone)
                     </dt>
@@ -55,12 +56,64 @@
                     </dd>
 
                     <dt>
+                        @Html.DisplayNameFor(model => model.location.country)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.country)
+                    </dd>
+
+                    <dt>
                         @Html.DisplayNameFor(model => model.nat)
                     </dt>
 
                     <dd>
                         @Html.DisplayFor(model => model.nat)
                     </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.city)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.city)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.state)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.state)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.postcode)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.postcode)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location.EndereçoCompleto)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location.EndereçoCompleto)
+                    </dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 </dl>

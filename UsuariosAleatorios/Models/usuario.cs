@@ -24,6 +24,10 @@ namespace UsuariosAleatorios.Models
         [Display(Name = "Naturalidade")]
         public string nat { get; set; }
 
+
+
+
+
         public usuario_nome name { get; set; }
 
         public usuario_login login { get; set; }
@@ -32,6 +36,7 @@ namespace UsuariosAleatorios.Models
 
 
         public usuario_location location { get; set; }
+
 
         [Display(Name = "Nome completo")]
         public string NomeCompleto
